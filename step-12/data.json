@@ -1,0 +1,22 @@
+[
+  {
+    "title": "clean the house",
+    "completed": false
+  },
+  {
+    "title": "do my taxes",
+    "completed": false
+  },
+  {
+    "title": "change the oil",
+    "completed": false
+  },
+  {
+    "title": "finish freeCodeCamp",
+    "completed": false
+  },
+  {
+    "title": "make friends",
+    "completed": false
+  }
+]

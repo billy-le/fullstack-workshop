@@ -13,9 +13,16 @@ MongoClient.connect(url, (err, client) => {
 
   const collection = client.db('todoApp').collection('todoItem');
 
-  collection.find({}).toArray((err, docs) => {
-    console.log(docs);
-  });
+  collection.findOne(
+    {
+      title: 'finish freeCodeCamp'
+    },
+    (err, doc) => {
+      assert.equal(null, err);
+
+      console.log('I really need to ' + doc.title);
+    }
+  );
 
   client.close();
 });
