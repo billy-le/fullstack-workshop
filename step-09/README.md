@@ -1,5 +1,7 @@
 # Creating Our First Collection in MongoDB
 
+We'll be connecting to our database and create a collection so we can start inserting, retrieving, updating, and deleting documents - the basics of CRUD! But let's just create one document for now.
+
 # Example Code
 
 database-final.js
@@ -15,19 +17,19 @@ database-final.js
 4.  Now let's go make that collection and insert our first document! After our `console.log()` statement, type in the following:
 
     ```
-    const collection = client.db('todoApp').collection('todoList');
+    const collection = client.db('todoApp').collection('todoItem');
 
-    collection.insert({
-      todoItem: {
+    collection.insert(
+      {
         title: 'finish workshop',
         completed: false,
       }
-    });
+    );
 
     client.close();
     ```
 
-5.  Let's break this part down. The first thing is we are storing the reference to our collection called 'todoList' inside of a database called 'todoApp'. We did this all in one line using the `client` object that was passed as a parameter from the `.connect()` function.
+5.  Let's break this part down. The first thing is we are storing the reference to our collection called 'todoItem' inside of a database called 'todoApp'. We did this all in one line using the `client` object that was passed as a parameter from the `.connect()` function.
 
 6.  After creating the collection, we are now ready to insert / add our first document. We called `collection.insert()` that takes an object as an argument. This object we passed in is our model for our todoItem! It has a title as a string value and completed as our boolean value.
 

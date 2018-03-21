@@ -2,6 +2,7 @@
 
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
+const data = require('./data');
 
 const url = 'mongodb://localhost:27017';
 
@@ -12,10 +13,6 @@ MongoClient.connect(url, (err, client) => {
 
   const collection = client.db('todoApp').collection('todoItem');
 
-  collection.insert({
-    title: 'finish workshop',
-    completed: false
-  });
-
+  collection.insertMany(data);
   client.close();
 });
