@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+var router = express.Router();
 
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectID;
@@ -17,30 +18,24 @@ MongoClient.connect(url, (err, client) => {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
 
-  app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Credentials', 'true');
-    res.setHeader(
-      'Access-Control-Allow-Methods',
-      'GET,HEAD,OPTIONS,POST,PUT,DELETE'
-    );
-    res.setHeader(
+  app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header(
       'Access-Control-Allow-Headers',
-      'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers'
+      'Origin, X-Requested-With, Content-Type, Accept'
     );
-    res.setHeader('Cache-Control', 'no-cache');
     next();
   });
 
-  app.get('/', (req, res) => {
+  router.route('/').get((req, res) => {
     collection.find({}).toArray((err, docs) => {
       assert.equal(null, err);
 
-      return res.status(200).send(docs);
+      return res.status(200).json(docs);
     });
   });
 
-  app.post('/', (req, res) => {
+  router.route('/').post((req, res) => {
     const todoItem = req.body;
 
     collection.insert(todoItem, (err, result) => {
@@ -48,11 +43,11 @@ MongoClient.connect(url, (err, client) => {
 
       console.log(`The todo item: ${todoItem.title} was successfully created.`);
 
-      return res.status(200).send(todoItem);
+      return res.status(200).json(todoItem);
     });
   });
 
-  app.put('/:itemId', (req, res) => {
+  router.route('/:itemId').put((req, res) => {
     const itemId = req.params.itemId;
     const todoItem = req.body;
     collection.findOneAndUpdate(
@@ -85,7 +80,7 @@ MongoClient.connect(url, (err, client) => {
     );
   });
 
-  app.delete('/:itemId', (req, res) => {
+  router.route('/:itemId').delete((req, res) => {
     const itemId = req.params.itemId;
 
     collection.findOneAndDelete(
@@ -111,7 +106,9 @@ MongoClient.connect(url, (err, client) => {
     );
   });
 
-  app.listen(3000, () => {
-    console.log('The server is listening on PORT 3000');
+  app.use('/api', router);
+
+  app.listen(3001, () => {
+    console.log('The server is listening on PORT 3001');
   });
 });
