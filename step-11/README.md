@@ -8,7 +8,7 @@ database-final.js
 
 ### Step
 
-1.  Inside your `database.js` file, delete the previous `collection.insertMany()` code.
+1.  Inside your `database.js` file, delete the previous `collection.insertMany()` and `const data` code.
 
 2.  Let's replace that line of code with:
 

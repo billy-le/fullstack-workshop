@@ -2,7 +2,6 @@
 
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
-const data = require('./data');
 
 const url = 'mongodb://localhost:27017';
 

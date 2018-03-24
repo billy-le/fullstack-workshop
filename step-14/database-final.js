@@ -1,6 +1,7 @@
 'use strict';
 
 const MongoClient = require('mongodb').MongoClient;
+const ObjectId = require('mongodb').ObjectID;
 const assert = require('assert');
 
 const url = 'mongodb://localhost:27017';
@@ -12,14 +13,25 @@ MongoClient.connect(url, (err, client) => {
 
   const collection = client.db('todoApp').collection('todoItem');
 
-  collection.findOne(
+  collection.findOneAndUpdate(
     {
-      title: 'finish freeCodeCamp'
+      _id: ObjectId('5ab1efdea1ca172701c8d146')
+    },
+    {
+      $set: {
+        title: 'Woot! Update Complete!'
+      }
+    },
+    {
+      returnNewDocument: true
     },
     (err, doc) => {
       assert.equal(null, err);
 
-      console.log('I really need to ' + doc.title);
+      const result = JSON.parse(JSON.stringify(doc));
+      console.log(
+        `The document: ${result.value.title} was successfully updated`
+      );
     }
   );
 
