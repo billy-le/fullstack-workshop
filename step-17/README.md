@@ -1,4 +1,4 @@
-# Creating our REST API
+# The "GET" method
 
 Let's work return data from our `GET` request.
 

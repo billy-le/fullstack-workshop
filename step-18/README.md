@@ -1,4 +1,4 @@
-# Creating our REST API
+# The "POST" method
 
 Let's make sure we can now create todo items using the `POST` request.
 
