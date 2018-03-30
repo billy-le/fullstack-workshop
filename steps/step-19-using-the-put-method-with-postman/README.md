@@ -8,7 +8,7 @@ server-final.js
 
 ### Step
 
-1.  This is going to be our code for updating our code:
+1.  This is going to be our code for updating our code inside `server.js`:
 
     ```
     app.put('/:itemId', (req, res) => {
