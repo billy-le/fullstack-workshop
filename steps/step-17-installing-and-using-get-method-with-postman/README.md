@@ -8,7 +8,7 @@ server-final.js
 
 ### Step
 
-1.  Okay, let's now get all our files and make the request! First thing you want is [Postman](https://www.getpostman.com/). It's a Google application that you can use to test your API's endpoints.
+1.  Okay, let's now get all our files and make the request! First thing you want is [Postman](https://www.getpostman.com/). It's a Google application that you can use to test your API's endpoints. Also, let's delete our `index.html` since we will makes some changes in our `server.js` file.
 
 2.  After that let's change the code in our `app.get()` to:
 
