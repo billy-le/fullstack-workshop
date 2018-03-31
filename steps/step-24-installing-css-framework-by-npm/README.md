@@ -20,12 +20,8 @@ We are going to remove some unnecessary code and files to make our app cleaner a
     ```
     import logo from './logo.svg'
     import './App.css';
-    ```
-
-    And replace all the HTML-like code in the `return` block, which is called JSX (we'll get to this later), with:
-
-    ```
-    <div>Hello World!</div>
+    <img src={logo} className="App-logo" alt="logo">
+    all "className" and their values
     ```
 
     So what you should have left in `App.js` is:
@@ -37,7 +33,12 @@ We are going to remove some unnecessary code and files to make our app cleaner a
       render() {
         return (
           <div>
-            Hello World!
+            <header>
+              <h1>Welcome to React</h1>
+            </header>
+            <p>
+              To get started, edit <code>src/App.js</code> and save to reload.
+            </p>
           </div>
         );
       }
@@ -63,3 +64,5 @@ We are going to remove some unnecessary code and files to make our app cleaner a
 
     ReactDOM.render(<App />, document.getElementById('root'));
     ```
+
+4.  Awesome~! We have some very minimal boilerplate code now.
