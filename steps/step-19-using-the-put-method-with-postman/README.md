@@ -6,7 +6,7 @@ Time to update our todo items with the `PUT` request.
 
 server-final.js
 
-### Step
+### Steps
 
 1.  This is going to be our code for updating our code inside `server.js`:
 

@@ -4,7 +4,7 @@
 
 database-final.js
 
-### Step
+### Steps
 
 1.  After installing MongoDB and running the database and service, we will create a basic database. Create a new file called `database.js` in your directory.
 

@@ -6,7 +6,7 @@ We will be working on building our REST API. It's a way of writing url's and par
 
 server-final.js
 
-### Step
+### Steps
 
 1.  The next thing we want to do is install `body-parser`. It's a library that helps use convert some of our front-end input into something that our express can read and work with.
 

@@ -2,7 +2,7 @@
 
 A server's job is to process a request and then send back a response. We will create a simple response using our previous code. There are many different types of requests but the most used are 'GET', 'POST', 'UPDATE', and 'DELETE'. We will be creating a simple 'GET' request.
 
-### Example Code
+## Example Code
 
 server-final.js
 

@@ -2,7 +2,7 @@
 
 We are going to remove some unnecessary code and files to make our app cleaner and easier to start from "scratch".
 
-### Step
+### Steps
 
 1.  Delete all the files from within the newly created `client` folder:
 

@@ -6,7 +6,7 @@ Last but not least is our `DELETE` method to delete documents from out database.
 
 server-final.js
 
-### Step
+### Steps
 
 1.  This is going to be our code for deleting our todo item:
 

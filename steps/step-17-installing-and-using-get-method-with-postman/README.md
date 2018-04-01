@@ -6,7 +6,7 @@ Let's work return data from our `GET` request.
 
 server-final.js
 
-### Step
+### Steps
 
 1.  Okay, let's now get all our files and make the request! First thing you want is [Postman](https://www.getpostman.com/). It's a Google application that you can use to test your API's endpoints. Also, let's delete our `index.html` since we will makes some changes in our `server.js` file.
 

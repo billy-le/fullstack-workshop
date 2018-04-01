@@ -6,7 +6,7 @@ Now it's time to learn how to delete a document in MongoDB.
 
 database-final.js
 
-### Step
+### Steps
 
 1.  We are going to find the document with the `_id` of your choosing.
 

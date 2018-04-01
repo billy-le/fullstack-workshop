@@ -2,7 +2,7 @@
 
 So far we've been logging out our documents if it is found. It's time to upgrade to a nice interface to help us find our collections and documents quickly. Let's use Robomongo's incredible [Robo 3T](https://robomongo.org/download) program.
 
-### Step
+### Steps
 
 1.  Go to the website and download Robo 3T.
 

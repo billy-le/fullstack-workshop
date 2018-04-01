@@ -6,7 +6,7 @@ Let's make sure we can now create todo items using the `POST` request.
 
 server-final.js
 
-### Step
+### Steps
 
 1.  Next up is our `POST` method. It's the method where we can send data to the server inside of the body object.
 

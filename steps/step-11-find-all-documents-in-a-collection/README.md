@@ -6,7 +6,7 @@ We need to find out what's in our `todoApp` database and check the `todoItem` co
 
 database-final.js
 
-### Step
+### Steps
 
 1.  Inside your `database.js` file, delete the previous `collection.insertMany()` and `const data` code.
 

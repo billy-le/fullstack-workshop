@@ -2,7 +2,7 @@
 
 We're going to create a server now using express!
 
-### Code Example
+## Example Code
 
 server-final.js
 

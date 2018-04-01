@@ -6,7 +6,7 @@ Back in our database.js file, we will update one of our documents. Find the `_id
 
 database-final.js
 
-### Step
+### Steps
 
 1.  We are going to find the document with the `_id` of your choosing.
 

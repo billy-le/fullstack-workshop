@@ -6,7 +6,7 @@ We'll be connecting to our database and create a collection so we can start inse
 
 database-final.js
 
-### Step
+### Steps
 
 1.  The first thing we are going to do is make some small changes. At the top, we are going to import a node module called `assert`. It allows us to test things to see if they are true or not. After the `const MongoClient = require('mongodb').MongoClient` type in `const assert = require('assert')`;
 

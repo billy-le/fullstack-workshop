@@ -1,68 +1,53 @@
-# Create-React-App Clean-Up
+# Installing a CSS Framework
 
-We are going to remove some unnecessary code and files to make our app cleaner and easier to start from "scratch".
+We will be installing [Bulma](www.bulma.io), a light-weight and minimal CSS framework.
 
-### Step
+## Example Code
 
-1.  Delete all the files from within the newly created `client` folder:
+/client/src/App.js
+/client/src/index.js
 
-    ```
-    README.md
-    App.css
-    App.test.js
-    index.css
-    logo.svg
-    registerServiceWorker.js
-    ```
+### Steps
 
-2.  Now we want to remove those references from the files we want to keep. Delete the following lines of code from the `App.js` file:
+1.  In the terminal, navigate to your `/client` folder. From there, type in `npm install bulma --save`. We are installing bulma through npm which is very different from using the traditional `<link>` tag often found in the index.html.
+
+2.  In our `/client/src/index.js` file, we are now going to import bulma from our `client/node_modules` folder. After all the other import statements, type in `import 'bulma/css/bulma.css';`. We can now use bulma's class names throughout our app.
+
+3.  For the sake of time, we are going to use a template I've created for our todo application. Copy and paste the following code in the return statement inside of the `/client/src/App.js` file.
 
     ```
-    import logo from './logo.svg'
-    import './App.css';
-    <img src={logo} className="App-logo" alt="logo">
-    all "className" and their values
-    ```
-
-    So what you should have left in `App.js` is:
-
-    ```
-    import React, { Component } from 'react';
-
-    class App extends Component {
-      render() {
-        return (
-          <div>
-            <header>
-              <h1>Welcome to React</h1>
-            </header>
-            <p>
-              To get started, edit <code>src/App.js</code> and save to reload.
-            </p>
+    return (
+      <div className="container">
+        <h1 className="title is-1 has-text-centered">My Todo App</h1>
+        <div className="box">
+          <div className="field has-addons has-addons-centered">
+            <div className="control">
+              <input type="text" name="" id="" className="input is-primary" />
+            </div>
+            <div className="control">
+              <button className="button is-primary">Add</button>
+            </div>
           </div>
-        );
-      }
-    }
-
-    export default App;
+          <table className="table is-striped is-hoverable is-fullwidth is-narrow">
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>Completed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>This is where we will put tasks</td>
+                <td>Edit Button</td>
+                <td>Delete Button</td>
+                <td>Checkbox for task completion</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     ```
 
-3.  Delete the lines of code from the following `index.js` file:
-
-    ```
-    import './index.css';
-    import registerServiceWorker from './registerServiceWorker';
-    registerServiceWorker();
-    ```
-
-    What you should have in `index.js` is:
-
-    ```
-    import React from 'react';
-    import ReactDOM from 'react-dom';
-    import App from './App';
-
-    ReactDOM.render(<App />, document.getElementById('root'));
-    ```
-
-4.  Awesome~! We have some very minimal boilerplate code now.
+4.  If your client server is running, you should see your localhost:3000 reload with the new changes you've made. If not, then go back in the terminal, navigate to the `/client` folder, and type in `npm start`. This command will automatically open a new browser tab and load your application.

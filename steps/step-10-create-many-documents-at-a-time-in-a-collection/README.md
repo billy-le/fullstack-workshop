@@ -6,7 +6,7 @@ So we are going to play around in our `database.js` file before we finally delet
 
 database-final.js
 
-### Step
+### Steps
 
 1.  Inside your `database.js` file, delete the previous `collection.insert()` code. We are moving on to insert a metric shit ton of documents! Just kidding.
 
