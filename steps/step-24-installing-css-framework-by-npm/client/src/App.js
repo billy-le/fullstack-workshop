@@ -14,21 +14,35 @@ class App extends Component {
               <button className="button is-primary">Add</button>
             </div>
           </div>
-          <table className="table is-striped is-hoverable is-fullwidth is-narrow">
+          <table className="table is-striped is-hoverable is-fullwidth is-narrow has-text-centered">
             <thead>
               <tr>
                 <th>Task</th>
-                <th>Edit</th>
-                <th>Delete</th>
-                <th>Completed</th>
+                <th className="has-text-centered">Edit</th>
+                <th className="has-text-centered">Delete</th>
+                <th className="has-text-centered">Completed</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>This is where we will put tasks</td>
-                <td>Edit Button</td>
-                <td>Delete Button</td>
-                <td>Checkbox for task completion</td>
+                <td className="has-text-centered">
+                  <i className="fas fa-edit has-text-info" />
+                </td>
+                <td className="has-text-centered has-text-danger">
+                  <i className="fas fa-trash" />
+                </td>
+                <td className="has-text-centered">
+                  <div className="field">
+                    <input
+                      className="is-checkradio"
+                      id="task-complete"
+                      type="checkbox"
+                      name="task-complete"
+                    />
+                    <label htmlFor="task-complete" />
+                  </div>
+                </td>
               </tr>
             </tbody>
           </table>

@@ -118,3 +118,4 @@ $RECYCLE.BIN/
 *.lnk
 
 /node_modules
+yarn-error.log
